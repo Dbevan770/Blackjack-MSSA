@@ -1,0 +1,10 @@
+services:
+  blackjack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app
